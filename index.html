@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="main.js" defer></script>
+    <title>Compare Gas Stations</title>
+  </head>
+  <body>
+    <div class="station1">
+      <div class="">주유소1</div>
+      <label for="station1-price-per-liter">리터당 가격</label>
+      <input type="number" id="station1-price-per-liter" value="1980" name="station-price-per-liter" required />
+      <input type="checkbox" id="station1-is-GS" name="station1-GS" />
+      <label for="station1-is-GS">GS주유소</label>
+    </div>
+    <div class="station2">
+      <div class="">주유소2</div>
+      <label for="station2-price-per-liter">리터당 가격</label>
+      <input type="number" id="station2-price-per-liter" value="1980" name="station-price-per-liter" required />
+      <input type="checkbox" id="station2-is-GS" name="station2-GS" />
+      <label for="station2-is-GS">GS주유소</label>
+    </div>
+    <div class="refuel-info">
+      <legend>입력 방식</legend>
+      <div>
+        <input type="radio" name="input-type" id="fuel-step" checked />
+        <label for="fuel-step">주유량(칸)</label>
+      </div>
+      <div>
+        <input type="radio" name="input-type" id="price" />
+        <label for="refuel-step">주유금액(원)</label>
+      </div>
+      <label for="refuel-step">주유량(칸)</label>
+      <input type="number" name="refuel-step" id="refuel-step" value="4" step="0.5" min="0" max="10" />
+
+      <label for="refuel-want-price">주유금액(원)</label>
+      <input type="number" name="refuel-want-price" id="refuel-want-price" value="30000" step="10000" min="0" />
+
+      <input type="checkbox" name="break-unit-k-won" id="break-unit-k-won" />
+      <label for="break-unit-k-won">천 원 단위 끊기</label>
+    </div>
+    <div class="card-discount-info">
+      <label for="discount-limit">월 할인 한도</label>
+      <input type="text" name="discount-limit" id="discount-limit" value="15000원" readonly />
+      <label for="accumulated-discount-price">누적 할인 금액</label>
+      <input type="text" name="accumulated-discount-price" id="accumulated-discount-price" value="" />
+    </div>
+    <div class="result">
+      <input type="button" value="비교 하기" />
+      <div class="">결과</div>
+      <div class="result_text"></div>
+    </div>
+  </body>
+</html>
